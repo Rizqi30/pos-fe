@@ -31,8 +31,12 @@ function NoTableWarning() {
 
 function MenuProductCard({ product, table }: { product: Product; table: string }) {
   const router = useRouter();
-  const itemInCart = useCartStore((s) => s.items.filter((i) => i.product.id === product.id));
-  const totalQty = itemInCart.reduce((sum, i) => sum + i.quantity, 0);
+  const items = useCartStore((s) => s.items);
+  const totalQty = useMemo(() => {
+    return items
+      .filter((i) => i.product.id === product.id)
+      .reduce((sum, i) => sum + i.quantity, 0);
+  }, [items, product.id]);
 
   return (
     <button
