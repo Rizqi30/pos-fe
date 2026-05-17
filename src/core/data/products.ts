@@ -1,0 +1,206 @@
+// ============================================================
+// Mock Data — replace with API calls in production
+// ============================================================
+
+import { Category, Product } from '@/core/types';
+
+export const categories: Category[] = [
+  { id: 'all', name: 'Semua', icon: '🍽️' },
+  { id: 'coffee', name: 'Kopi', icon: '☕' },
+  { id: 'non-coffee', name: 'Non-Kopi', icon: '🧃' },
+  { id: 'food', name: 'Makanan', icon: '🍔' },
+  { id: 'snack', name: 'Snack', icon: '🍟' },
+  { id: 'dessert', name: 'Dessert', icon: '🍰' },
+];
+
+export const products: Product[] = [
+  // ── Coffee ──
+  {
+    id: 'prod-001',
+    name: 'Espresso',
+    price: 18000,
+    image: '/products/espresso.jpg',
+    categoryId: 'coffee',
+    description: 'Bold single-shot espresso',
+    isAvailable: true,
+  },
+  {
+    id: 'prod-002',
+    name: 'Americano',
+    price: 22000,
+    image: '/products/americano.jpg',
+    categoryId: 'coffee',
+    description: 'Espresso with hot water',
+    isAvailable: true,
+  },
+  {
+    id: 'prod-003',
+    name: 'Cappuccino',
+    price: 28000,
+    image: '/products/cappuccino.jpg',
+    categoryId: 'coffee',
+    description: 'Espresso with steamed milk foam',
+    isAvailable: true,
+  },
+  {
+    id: 'prod-004',
+    name: 'Caffe Latte',
+    price: 28000,
+    image: '/products/latte.jpg',
+    categoryId: 'coffee',
+    description: 'Espresso with steamed milk',
+    isAvailable: true,
+  },
+  {
+    id: 'prod-005',
+    name: 'Mocha Latte',
+    price: 32000,
+    image: '/products/mocha.jpg',
+    categoryId: 'coffee',
+    description: 'Espresso, chocolate, steamed milk',
+    isAvailable: true,
+  },
+  {
+    id: 'prod-006',
+    name: 'Vanilla Latte',
+    price: 32000,
+    image: '/products/vanilla-latte.jpg',
+    categoryId: 'coffee',
+    description: 'Espresso with vanilla syrup & milk',
+    isAvailable: true,
+  },
+
+  // ── Non-Coffee ──
+  {
+    id: 'prod-007',
+    name: 'Matcha Latte',
+    price: 30000,
+    image: '/products/matcha.jpg',
+    categoryId: 'non-coffee',
+    description: 'Premium Japanese matcha with milk',
+    isAvailable: true,
+  },
+  {
+    id: 'prod-008',
+    name: 'Thai Tea',
+    price: 25000,
+    image: '/products/thai-tea.jpg',
+    categoryId: 'non-coffee',
+    description: 'Sweet Thai tea with condensed milk',
+    isAvailable: true,
+  },
+  {
+    id: 'prod-009',
+    name: 'Taro Milk',
+    price: 28000,
+    image: '/products/taro.jpg',
+    categoryId: 'non-coffee',
+    description: 'Creamy taro with fresh milk',
+    isAvailable: true,
+  },
+  {
+    id: 'prod-010',
+    name: 'Lemon Tea',
+    price: 20000,
+    image: '/products/lemon-tea.jpg',
+    categoryId: 'non-coffee',
+    description: 'Fresh brewed tea with lemon',
+    isAvailable: true,
+  },
+
+  // ── Food ──
+  {
+    id: 'prod-011',
+    name: 'Club Sandwich',
+    price: 35000,
+    image: '/products/sandwich.jpg',
+    categoryId: 'food',
+    description: 'Triple-decker club sandwich',
+    isAvailable: true,
+  },
+  {
+    id: 'prod-012',
+    name: 'Beef Burger',
+    price: 42000,
+    image: '/products/burger.jpg',
+    categoryId: 'food',
+    description: 'Juicy beef patty with cheese',
+    isAvailable: true,
+  },
+  {
+    id: 'prod-013',
+    name: 'Nasi Goreng',
+    price: 30000,
+    image: '/products/nasi-goreng.jpg',
+    categoryId: 'food',
+    description: 'Indonesian fried rice',
+    isAvailable: true,
+  },
+  {
+    id: 'prod-014',
+    name: 'Chicken Wings',
+    price: 38000,
+    image: '/products/wings.jpg',
+    categoryId: 'food',
+    description: 'Crispy chicken wings (6 pcs)',
+    isAvailable: true,
+  },
+
+  // ── Snack ──
+  {
+    id: 'prod-015',
+    name: 'French Fries',
+    price: 22000,
+    image: '/products/fries.jpg',
+    categoryId: 'snack',
+    description: 'Crispy golden fries',
+    isAvailable: true,
+  },
+  {
+    id: 'prod-016',
+    name: 'Onion Rings',
+    price: 24000,
+    image: '/products/onion-rings.jpg',
+    categoryId: 'snack',
+    description: 'Crunchy beer-battered onion rings',
+    isAvailable: true,
+  },
+  {
+    id: 'prod-017',
+    name: 'Roti Bakar',
+    price: 18000,
+    image: '/products/roti-bakar.jpg',
+    categoryId: 'snack',
+    description: 'Toasted bread with butter & jam',
+    isAvailable: true,
+  },
+
+  // ── Dessert ──
+  {
+    id: 'prod-018',
+    name: 'Croissant',
+    price: 25000,
+    image: '/products/croissant.jpg',
+    categoryId: 'dessert',
+    description: 'Buttery French croissant',
+    isAvailable: true,
+  },
+  {
+    id: 'prod-019',
+    name: 'Cheesecake',
+    price: 35000,
+    image: '/products/cheesecake.jpg',
+    categoryId: 'dessert',
+    description: 'New York-style cheesecake',
+    isAvailable: true,
+  },
+  {
+    id: 'prod-020',
+    name: 'Brownies',
+    price: 28000,
+    image: '/products/brownies.jpg',
+    categoryId: 'dessert',
+    description: 'Rich dark chocolate brownies',
+    isAvailable: true,
+  },
+];
