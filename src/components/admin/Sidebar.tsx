@@ -18,8 +18,8 @@ interface NavItem {
 }
 
 const navItems: NavItem[] = [
-  { href: '/', label: 'Dashboard', icon: '📊', exact: true },
-  { href: '/kasir', label: 'Kasir POS', icon: '🛒' },
+  { href: '/admin', label: 'Dashboard', icon: '📊', exact: true },
+  { href: '/admin/kasir', label: 'Kasir POS', icon: '🛒' },
   { href: '/kitchen', label: 'Kitchen Display', icon: '🍳' },
 ];
 

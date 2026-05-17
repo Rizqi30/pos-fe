@@ -56,7 +56,7 @@ function ProductDetailContent() {
     const variants: VariantSelection = isDrink ? { temperature, size } : {};
     addItemWithOptions(product, variants, selectedAddOns, notes);
     setJustAdded(true);
-    setTimeout(() => { router.push(`/menu?table=${table}`); }, 800);
+    setTimeout(() => { router.push(`/customer/menu?table=${table}`); }, 800);
   }, [product, isDrink, temperature, size, selectedAddOns, notes, addItemWithOptions, router, table]);
 
   if (!product) {
@@ -64,7 +64,7 @@ function ProductDetailContent() {
       <div className="flex min-h-[80vh] flex-col items-center justify-center px-6 text-center">
         <span className="text-5xl opacity-30">🔍</span>
         <h2 className="mt-4 text-lg font-bold text-[var(--text-primary)]">Produk Tidak Ditemukan</h2>
-        <button onClick={() => router.push(`/menu?table=${table}`)} className="mt-6 rounded-xl bg-amber-500 px-6 py-3 text-sm font-bold text-white">
+        <button onClick={() => router.push(`/customer/menu?table=${table}`)} className="mt-6 rounded-xl bg-amber-500 px-6 py-3 text-sm font-bold text-white">
           ← Kembali ke Menu
         </button>
       </div>
@@ -96,7 +96,7 @@ function ProductDetailContent() {
       {/* ── Hero Section ──────────────────────────────────── */}
       <div className={`relative bg-gradient-to-br ${categoryBg} ${categoryBgDark} px-5 pb-8 pt-4`}>
         <button
-          onClick={() => router.push(`/menu?table=${table}`)}
+          onClick={() => router.push(`/customer/menu?table=${table}`)}
           className="flex items-center gap-1.5 rounded-xl bg-[var(--bg-card)]/70 px-3 py-2 text-xs font-medium text-[var(--text-secondary)] backdrop-blur-sm transition-all active:scale-95"
         >
           <span>←</span> Menu
@@ -233,7 +233,7 @@ function ProductDetailContent() {
             )}
           </button>
           {itemCount > 0 && !justAdded && (
-            <button onClick={() => router.push(`/cart?table=${table}`)} className="flex w-full items-center justify-between rounded-xl bg-[var(--bg-surface)] px-4 py-3 text-xs transition-all active:scale-[0.98]">
+            <button onClick={() => router.push(`/customer/cart?table=${table}`)} className="flex w-full items-center justify-between rounded-xl bg-[var(--bg-surface)] px-4 py-3 text-xs transition-all active:scale-[0.98]">
               <span className="text-[var(--text-muted)]">🛒 {itemCount} item di keranjang</span>
               <span className="font-bold text-amber-600 tabular-nums">{formatRupiah(cartTotal)}</span>
             </button>

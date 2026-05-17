@@ -195,7 +195,7 @@ function CartContent() {
         <h2 className="text-lg font-bold text-white">Keranjang Kosong</h2>
         <p className="mt-1.5 text-sm text-neutral-500">Belum ada item di keranjang Anda</p>
         <button
-          onClick={() => router.push(`/menu${table ? `?table=${table}` : ''}`)}
+          onClick={() => router.push(`/customer/menu${table ? `?table=${table}` : ''}`)}
           className="mt-6 rounded-xl bg-amber-500 px-6 py-3 text-sm font-bold text-white transition-all active:scale-95"
         >
           ← Kembali ke Menu
@@ -232,14 +232,14 @@ function CartContent() {
     addOrder(newOrder);
     clearCart();
     setShowQRIS(false);
-    router.push(`/menu?table=${table ?? '00'}`);
+    router.push(`/customer/menu?table=${table ?? '00'}`);
   };
 
   return (
     <>
       <div className="space-y-4 px-4 pb-36 pt-4">
         <button
-          onClick={() => router.push(`/menu${table ? `?table=${table}` : ''}`)}
+          onClick={() => router.push(`/customer/menu${table ? `?table=${table}` : ''}`)}
           className="flex items-center gap-1.5 text-xs font-medium text-neutral-400 transition-all hover:text-white"
         >
           <span>←</span> Kembali ke Menu

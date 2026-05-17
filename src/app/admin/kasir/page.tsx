@@ -10,8 +10,8 @@ import { categories, products } from '@/core/data/products';
 import { useCartStore, selectItemCount } from '@/store/useCartStore';
 import { formatRupiah } from '@/core/utils/format';
 import { Product, VariantSelection, AddOn } from '@/core/types';
-import ProductCard from './_components/ProductCard';
-import CartPanel from './_components/CartPanel';
+import ProductCard from './components/ProductCard';
+import CartPanel from './components/CartPanel';
 import ProductDetailModal from '@/components/ProductDetailModal';
 import ThemeToggle from '@/components/ThemeToggle';
 
@@ -115,8 +115,8 @@ export default function KasirPage() {
       const matchesCategory =
         activeCategory === 'all' || product.categoryId === activeCategory;
       const matchesSearch = product.name
-        .toLowerCase()
-        .includes(searchQuery.toLowerCase());
+          .toLowerCase()
+          .includes(searchQuery.toLowerCase());
       return matchesCategory && matchesSearch && product.isAvailable;
     });
   }, [searchQuery, activeCategory]);
@@ -129,7 +129,7 @@ export default function KasirPage() {
       <header className="flex h-14 flex-shrink-0 items-center justify-between border-b border-[var(--border-primary)] bg-[var(--bg-surface)]/70 px-5 backdrop-blur-xl">
         {/* ── Left: Back to Dashboard ────────────────────── */}
         <Link
-          href="/"
+          href="/admin"
           className="group flex items-center gap-2 rounded-lg px-3 py-1.5 text-sm font-medium text-[var(--text-muted)] transition-all duration-200 hover:bg-[var(--bg-hover)] hover:text-[var(--text-primary)]"
         >
           <span className="flex h-7 w-7 items-center justify-center rounded-lg bg-[var(--bg-hover)] text-xs transition-all group-hover:bg-amber-500/15 group-hover:text-amber-500">

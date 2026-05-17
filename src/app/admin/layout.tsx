@@ -16,7 +16,7 @@ export default function AdminLayout({
   const pathname = usePathname();
 
   // Kasir page gets full-width — no sidebar
-  const isKasirMode = pathname === '/kasir';
+  const isKasirMode = pathname === '/admin/kasir';
 
   if (isKasirMode) {
     return (

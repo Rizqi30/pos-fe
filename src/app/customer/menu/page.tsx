@@ -36,7 +36,7 @@ function MenuProductCard({ product, table }: { product: Product; table: string }
 
   return (
     <button
-      onClick={() => router.push(`/menu/${product.id}?table=${table}`)}
+      onClick={() => router.push(`/customer/menu/${product.id}?table=${table}`)}
       className="w-full rounded-2xl border border-[var(--border-primary)] bg-[var(--bg-card)] p-3 text-left transition-all duration-200 active:scale-[0.98]"
       style={{ boxShadow: 'var(--card-shadow)' }}
     >
@@ -86,7 +86,7 @@ function StickyCartBar({ table }: { table: string }) {
     <div className="fixed bottom-0 left-0 right-0 z-50">
       <div className="mx-auto max-w-md px-4 pb-4">
         <button
-          onClick={() => router.push(`/cart?table=${table}`)}
+          onClick={() => router.push(`/customer/cart?table=${table}`)}
           className="flex w-full items-center justify-between rounded-2xl bg-gradient-to-r from-amber-500 to-orange-500 px-5 py-4 shadow-2xl shadow-orange-500/30 transition-all active:scale-[0.98]"
         >
           <div className="flex items-center gap-3">
