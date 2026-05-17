@@ -127,16 +127,8 @@ export default function KasirPage() {
           TOP HEADER BAR
           ════════════════════════════════════════════════════ */}
       <header className="flex h-14 flex-shrink-0 items-center justify-between border-b border-[var(--border-primary)] bg-[var(--bg-surface)]/70 px-5 backdrop-blur-xl">
-        {/* ── Left: Back to Dashboard ────────────────────── */}
-        <Link
-          href="/admin"
-          className="group flex items-center gap-2 rounded-lg px-3 py-1.5 text-sm font-medium text-[var(--text-muted)] transition-all duration-200 hover:bg-[var(--bg-hover)] hover:text-[var(--text-primary)]"
-        >
-          <span className="flex h-7 w-7 items-center justify-center rounded-lg bg-[var(--bg-hover)] text-xs transition-all group-hover:bg-amber-500/15 group-hover:text-amber-500">
-            🏠
-          </span>
-          <span className="hidden sm:inline">Dashboard</span>
-        </Link>
+        {/* ── Left: Empty Spacer (or Kitchen Link if needed) ── */}
+        <div className="flex w-24"></div>
 
         {/* ── Center: POS Branding ────────────────────────── */}
         <div className="flex items-center gap-2.5">

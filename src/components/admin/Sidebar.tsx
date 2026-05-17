@@ -19,8 +19,8 @@ interface NavItem {
 
 const navItems: NavItem[] = [
   { href: '/admin', label: 'Dashboard', icon: '📊', exact: true },
-  { href: '/admin/kasir', label: 'Kasir POS', icon: '🛒' },
-  { href: '/kitchen', label: 'Kitchen Display', icon: '🍳' },
+  { href: '/admin/produk', label: 'Manajemen Produk', icon: '📦' },
+  { href: '/kasir', label: 'Kasir POS', icon: '🛒' },
 ];
 
 export default function Sidebar() {
